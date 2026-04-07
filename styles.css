@@ -25,7 +25,7 @@ nav {
   height: 80px;
 }
 .logo { cursor: pointer; display: flex; align-items: center; }
-.logo img { height: 64px; width: auto; display: block; }
+.logo img { height: 72px; width: auto; display: block; }
 .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
 .nav-links a { font-size: .875rem; color: var(--muted); text-decoration: none; cursor: pointer; transition: color .2s; }
 .nav-links a:hover { color: var(--black); }
@@ -81,6 +81,9 @@ nav {
 .uf li::before { content: ''; width: 5px; height: 5px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
 .ulink { font-size: .85rem; font-weight: 500; color: var(--green); cursor: pointer; }
 .ulink:hover { color: var(--green-dark); }
+.ucard-soon { opacity: .6; cursor: default; pointer-events: none; }
+.ucard-soon::before { background: var(--muted); }
+.ulink-soon { color: var(--muted); font-style: italic; }
 
 /* STATS */
 .stats { background: var(--black); padding: 64px 2rem; }
