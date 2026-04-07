@@ -6,10 +6,40 @@
 /* DIFFERENTIATORS */
 .cc-diff { padding: 80px 2rem; background: var(--white); }
 .cc-diff-inner { max-width: 1000px; margin: 0 auto; }
-.cc-diff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 3rem; }
-.cc-diff-card { border: 1px solid var(--border); border-radius: var(--r); padding: 2rem; background: var(--white); transition: box-shadow .25s, transform .25s; }
-.cc-diff-card:hover { box-shadow: 0 6px 24px rgba(0,103,75,.08); transform: translateY(-2px); }
-.cc-diff-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--green-light); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1.25rem; }
+.cc-diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3rem; }
+/* Staggered offset — second row shifted right */
+.cc-diff-card:nth-child(n+4) { transform: translateX(40px); }
+
+.cc-diff-card {
+  border: 1px solid var(--border); border-radius: var(--r); padding: 2rem 2rem 2rem 2.25rem;
+  background: var(--white); position: relative; overflow: hidden;
+  transition: box-shadow .3s, transform .3s, border-color .3s;
+  border-left: 3px solid transparent;
+  counter-increment: diffcard;
+}
+.cc-diff-card:nth-child(n+4):hover { transform: translateX(40px) translateY(-2px); }
+.cc-diff-card:nth-child(-n+3):hover { transform: translateY(-2px); }
+.cc-diff-card:hover {
+  box-shadow: 0 8px 28px rgba(0,103,75,.1);
+  border-left-color: var(--green);
+}
+
+/* Watermark number */
+.cc-diff-card::after {
+  content: "0" counter(diffcard);
+  position: absolute; top: 12px; right: 16px;
+  font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 600;
+  color: var(--green); opacity: .06; line-height: 1; pointer-events: none;
+}
+
+/* Icon hover animation */
+.cc-diff-icon {
+  width: 44px; height: 44px; border-radius: 10px; background: var(--green-light);
+  display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+  margin-bottom: 1.25rem; transition: transform .4s ease, background .3s;
+}
+.cc-diff-card:hover .cc-diff-icon { transform: scale(1.15) rotate(-8deg); background: var(--green-mid); }
+
 .cc-diff-card h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 500; color: var(--black); margin-bottom: .5rem; }
 .cc-diff-card p { font-size: .875rem; font-weight: 300; color: var(--muted); line-height: 1.7; }
 
@@ -212,6 +242,8 @@
   .tl-icon { width: 40px; height: 40px; font-size: 1rem; }
   .tl-card { padding: 1.5rem; }
   .cc-diff-grid { grid-template-columns: 1fr; }
+  .cc-diff-card:nth-child(n+4) { transform: none; }
+  .cc-diff-card:nth-child(n+4):hover { transform: translateY(-2px); }
   .cc-pricing-grid { grid-template-columns: 1fr; }
   .cc-record-grid { gap: .5rem; }
   .cc-school { padding: .5rem .75rem; }
