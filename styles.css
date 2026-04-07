@@ -25,7 +25,7 @@ nav {
   height: 80px;
 }
 .logo { cursor: pointer; display: flex; align-items: center; }
-.logo img { height: 56px; width: auto; display: block; }
+.logo img { height: 64px; width: auto; display: block; }
 .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
 .nav-links a { font-size: .875rem; color: var(--muted); text-decoration: none; cursor: pointer; transition: color .2s; }
 .nav-links a:hover { color: var(--black); }
