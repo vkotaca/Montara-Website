@@ -237,22 +237,41 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 640px) {
-  .tl-item { grid-template-columns: 40px 1fr; gap: 1rem; }
-  .tl-icon { width: 40px; height: 40px; font-size: 1rem; }
-  .tl-card { padding: 1.5rem; }
-  .cc-diff-grid { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+  /* Differentiators */
+  .cc-diff { padding: 48px 1.5rem; }
+  .cc-diff-grid { grid-template-columns: 1fr; margin-top: 2rem; }
   .cc-diff-card:nth-child(n+4) { transform: none; }
   .cc-diff-card:nth-child(n+4):hover { transform: translateY(-2px); }
-  .cc-pricing-grid { grid-template-columns: 1fr; }
-  .cc-record-grid { gap: .5rem; }
-  .cc-school { padding: .5rem .75rem; }
-  .cc-school-count { font-size: 1.2rem; }
-  .cc-counselor-inner { grid-template-columns: 1fr; }
-  .cc-counselor-photo img { max-width: 260px; }
+
+  /* Timeline */
+  .cc-process { padding: 48px 1rem; }
+  .tl-item { grid-template-columns: 36px 1fr; gap: .75rem; }
+  .tl-icon { width: 36px; height: 36px; font-size: .9rem; }
+  .tl-card { padding: 1.25rem; }
+  .tl-card h3 { font-size: 1.1rem; }
+
+  /* Comparison */
+  .cc-compare { padding: 48px 1.5rem; }
   .cc-compare-row { grid-template-columns: 1fr; }
   .cc-compare-header { display: none; }
   .cc-compare-feature { font-weight: 600; background: var(--off); }
   .cc-compare-them::before { content: 'Typical: '; font-weight: 500; color: var(--muted); }
   .cc-compare-us::before { content: 'Montara: '; font-weight: 600; color: var(--green); }
+
+  /* Track record */
+  .cc-record { padding: 48px 1.5rem; }
+  .cc-record-grid { gap: .5rem; }
+  .cc-school { padding: .5rem .75rem; }
+  .cc-school-count { font-size: 1.1rem; min-width: 20px; }
+  .cc-school-logo { height: 22px; width: 22px; }
+
+  /* Meet Quest */
+  .cc-counselor { padding: 48px 1.5rem; }
+  .cc-counselor-inner { grid-template-columns: 1fr; text-align: center; }
+  .cc-counselor-photo img { max-width: 200px; margin: 0 auto; }
+
+  /* Pricing */
+  .cc-pricing { padding: 48px 1.5rem; }
+  .cc-pricing-grid { grid-template-columns: 1fr; max-width: 100%; }
 }

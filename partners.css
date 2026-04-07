@@ -48,7 +48,9 @@
 .pt-cta { padding: 72px 2rem; text-align: center; max-width: 640px; margin: 0 auto; }
 .pt-cta p { font-size: 1rem; font-weight: 300; color: var(--muted); line-height: 1.7; margin-bottom: 2rem; }
 
-@media (max-width: 640px) {
-  .pt-card { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.75rem; }
-  .pt-logo { width: 80px; }
+@media (max-width: 768px) {
+  .pt-section { padding: 48px 1.5rem; }
+  .pt-card { grid-template-columns: 1fr; gap: 1rem; padding: 1.5rem; text-align: center; }
+  .pt-logo { width: 80px; height: 80px; margin: 0 auto; }
+  .pt-cta { padding: 48px 1.5rem; }
 }

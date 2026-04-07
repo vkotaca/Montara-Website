@@ -149,3 +149,77 @@ footer strong { color: rgba(255,255,255,.85); font-weight: 500; }
 .sc h4 { font-weight: 500; font-size: .95rem; color: var(--black); margin-bottom: .4rem; }
 .sc p { font-size: .875rem; font-weight: 300; color: var(--muted); line-height: 1.6; }
 .pagecta { padding: 72px 2rem; text-align: center; }
+
+/* HAMBURGER BUTTON — hidden on desktop */
+.nav-burger { display: none; }
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  /* Nav */
+  nav { height: 64px; padding: 0 1rem; }
+  .logo img { height: 50px; }
+
+  /* Hamburger */
+  .nav-burger {
+    display: flex; flex-direction: column; justify-content: center; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 8px; z-index: 200;
+  }
+  .nav-burger span {
+    display: block; width: 24px; height: 2px; background: var(--black);
+    transition: transform .3s, opacity .3s;
+  }
+  .nav-burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .nav-burger.active span:nth-child(2) { opacity: 0; }
+  .nav-burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  /* Mobile nav menu */
+  .nav-links {
+    display: none !important; flex-direction: column; position: absolute;
+    top: 64px; left: 0; right: 0; background: var(--white);
+    border-bottom: 1px solid var(--border); padding: 1.5rem 2rem;
+    gap: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  }
+  .nav-links.nav-open { display: flex !important; }
+  .nav-links a { font-size: 1rem; }
+  .nav-cta { text-align: center; display: block; }
+
+  /* Hero */
+  .hero { padding: 48px 1.5rem 64px; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero-sub { font-size: .9rem; }
+  .hero-actions { flex-direction: column; gap: .75rem; }
+  .hero-actions .btn-w, .hero-actions .btn-ol { width: 100%; text-align: center; }
+
+  /* Inner hero */
+  .ihero { padding: 48px 1.5rem 60px; }
+  .ihero h1 { font-size: 1.6rem; }
+
+  /* Trust marquee */
+  .trust { padding: 1rem 0; }
+  .trust p { font-size: .65rem; margin-bottom: .5rem; }
+  .trust-track span { font-size: .75rem; padding: 0 1rem; }
+
+  /* Sections */
+  .section { padding: 48px 1.5rem; }
+  .stitle { font-size: 1.4rem; }
+
+  /* Unit cards */
+  .units-grid { grid-template-columns: 1fr; }
+  .ucard { padding: 1.75rem; }
+
+  /* Stats */
+  .stats { padding: 40px 1.5rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .snum { font-size: 2rem; }
+
+  /* Testimonials */
+  .tgrid { grid-template-columns: 1fr; }
+
+  /* CTA / Form */
+  .ctasec { padding: 48px 1.5rem; }
+  .cform { padding: 1.5rem; }
+  .frow { grid-template-columns: 1fr; }
+
+  /* Footer */
+  footer { padding: 2rem 1.5rem; font-size: .75rem; }
+}
