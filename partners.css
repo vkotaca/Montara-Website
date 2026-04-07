@@ -49,8 +49,14 @@
 .pt-cta p { font-size: 1rem; font-weight: 300; color: var(--muted); line-height: 1.7; margin-bottom: 2rem; }
 
 @media (max-width: 768px) {
-  .pt-section { padding: 48px 1.5rem; }
-  .pt-card { grid-template-columns: 1fr; gap: 1rem; padding: 1.5rem; text-align: center; }
-  .pt-logo { width: 80px; height: 80px; margin: 0 auto; }
+  .pt-section { padding: 48px 1rem; }
+  .pt-card { grid-template-columns: 1fr; gap: 1rem; padding: 1.5rem; }
+  .pt-logo { width: 72px; height: 72px; margin: 0 auto; }
+  .pt-card h3 { text-align: center; font-size: 1.2rem; }
+  .pt-tagline { text-align: center; font-size: .72rem; }
+  .pt-card-content p { font-size: .84rem; }
+  .pt-card-content li { font-size: .8rem; }
+  .pt-link { display: block; text-align: center; }
   .pt-cta { padding: 48px 1.5rem; }
+  .pt-cta .stitle { font-size: 1.3rem; }
 }
