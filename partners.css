@@ -25,7 +25,7 @@
 .pt-card:hover { box-shadow: 0 8px 32px rgba(189,31,46,.1); transform: translateY(-2px); }
 
 .pt-logo {
-  width: 120px; height: auto; object-fit: contain; flex-shrink: 0;
+  width: 120px; height: 120px; object-fit: contain; flex-shrink: 0;
   border-radius: 8px; align-self: center;
 }
 
