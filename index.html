@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Montara Education</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo" onclick="showPage('home')">
+    <img src="assets/logo.png" alt="Montara Education">
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')">Home</a></li>
+    <li><a onclick="showPage('testprep')">Test Prep</a></li>
+    <li><a href="counseling.html">College Counseling</a></li>
+    <li><a class="nav-cta" onclick="showPage('home');setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),100)">Get Started</a></li>
+  </ul>
+</nav>
+
+<!-- HOME PAGE -->
+<div id="home" class="page active">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <img class="hero-logo" src="assets/logo.png" alt="Montara Education">
+      <span class="eyebrow">Expert Guidance. Proven Results.</span>
+      <h1>Unlock Your Student's <em>Full Potential</em></h1>
+      <p class="hero-sub">Montara Education offers premier test preparation and college counseling — combining rigor, strategy, and personal attention to open every door.</p>
+      <div class="hero-actions">
+        <button class="btn-w" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Schedule a Free Consultation</button>
+        <button class="btn-ol" onclick="document.getElementById('units').scrollIntoView({behavior:'smooth'})">Explore Our Programs</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <p>Trusted by families from</p>
+    <div class="trust-row">
+      <span>Harvard-Westlake</span>
+      <span>Menlo School</span>
+      <span>Crystal Springs</span>
+      <span>The Harker School</span>
+      <span>Chadwick School</span>
+    </div>
+  </div>
+
+  <section class="section" id="units">
+    <p class="slabel">Our Programs</p>
+    <h2 class="stitle">Two Pathways to Academic Success</h2>
+    <p class="ssub">Whether your student needs a higher score or a stronger application, we have a program designed for them.</p>
+    <div class="units-grid">
+      <div class="ucard" onclick="showPage('testprep')">
+        <div class="uicon">&#128221;</div>
+        <h3>Montara Test Prep</h3>
+        <p>Strategic, data-driven SAT and ACT preparation led by top-scoring instructors who know exactly what it takes to reach a 1500+ or 35+.</p>
+        <ul class="uf">
+          <li>SAT &amp; ACT private tutoring</li>
+          <li>Diagnostic assessment &amp; custom study plan</li>
+          <li>Small group courses available</li>
+          <li>Score improvement guarantee</li>
+        </ul>
+        <span class="ulink">Explore Test Prep &rarr;</span>
+      </div>
+      <div class="ucard" onclick="window.location.href='counseling.html'">
+        <div class="uicon">&#127891;</div>
+        <h3>Montara College Counseling</h3>
+        <p>Comprehensive, personalized college counseling that starts with who your student is — and builds a strategy that gets them where they want to go.</p>
+        <ul class="uf">
+          <li>School list strategy &amp; positioning</li>
+          <li>Essay development &amp; editing</li>
+          <li>Application management &amp; timelines</li>
+          <li>Financial aid &amp; scholarship guidance</li>
+        </ul>
+        <span class="ulink">Explore Counseling &rarr;</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stats-grid">
+      <div><div class="snum">93%</div><div class="slbl">of students improve their score after working with us</div></div>
+      <div><div class="snum">+180</div><div class="slbl">average SAT score improvement</div></div>
+      <div><div class="snum">85%</div><div class="slbl">admitted to a top-choice school</div></div>
+      <div><div class="snum">500+</div><div class="slbl">students helped since founding</div></div>
+    </div>
+  </section>
+
+  <section class="testi">
+    <div class="testi-inner">
+      <p class="slabel">Student Stories</p>
+      <h2 class="stitle">Results Families Trust</h2>
+      <div class="tgrid">
+        <div class="tcard">
+          <p class="tquote">&ldquo;My son went from a 1250 to a 1490 after two months with Montara. The instructors are exceptional &mdash; they didn&rsquo;t just teach content, they taught strategy.&rdquo;</p>
+          <div class="tauthor">&mdash; Parent of a Class of 2025 Student</div>
+          <div class="tservice">Montara Test Prep</div>
+        </div>
+        <div class="tcard">
+          <p class="tquote">&ldquo;Working with Montara&rsquo;s counselors transformed our daughter&rsquo;s application. She was admitted to her first-choice school &mdash; a school we thought was a reach.&rdquo;</p>
+          <div class="tauthor">&mdash; Parent of a Class of 2024 Student</div>
+          <div class="tservice">Montara College Counseling</div>
+        </div>
+        <div class="tcard">
+          <p class="tquote">&ldquo;The college counseling process felt overwhelming until Montara. They gave us a real roadmap and helped my daughter tell her story authentically.&rdquo;</p>
+          <div class="tauthor">&mdash; Parent of a Class of 2025 Student</div>
+          <div class="tservice">Montara College Counseling</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ctasec" id="contact">
+    <p class="slabel">Get Started</p>
+    <h2>Ready to Take the Next Step?</h2>
+    <p>Schedule a free 30-minute consultation and we&rsquo;ll recommend the right program for your student.</p>
+    <div class="cform">
+      <div class="frow">
+        <div class="fg"><label>Parent Name</label><input type="text" placeholder="Jane Smith"></div>
+        <div class="fg"><label>Student Name</label><input type="text" placeholder="Alex Smith"></div>
+      </div>
+      <div class="fg"><label>Email</label><input type="email" placeholder="jane@email.com"></div>
+      <div class="fg">
+        <label>Grade Level</label>
+        <select>
+          <option value="">Select a grade...</option>
+          <option>8th Grade</option>
+          <option>9th Grade</option>
+          <option>10th Grade</option>
+          <option>11th Grade</option>
+          <option>12th Grade</option>
+        </select>
+      </div>
+      <div class="fg" style="margin-bottom:1.5rem">
+        <label>Area of Interest</label>
+        <select>
+          <option value="">Select a program...</option>
+          <option>SAT Preparation</option>
+          <option>ACT Preparation</option>
+          <option>College Counseling</option>
+          <option>Both Test Prep &amp; Counseling</option>
+        </select>
+      </div>
+      <button class="btn-g" style="width:100%">Request a Free Consultation</button>
+    </div>
+  </section>
+
+  <footer>
+    <strong>Montara Education</strong> &middot; Montara Test Prep &middot; Montara College Counseling<br>
+    &copy; <script>document.write(new Date().getFullYear())</script> Montara Education. All rights reserved.
+  </footer>
+</div>
+
+<!-- TEST PREP PAGE -->
+<div id="testprep" class="page">
+  <section class="ihero">
+    <p class="eyebrow">Montara Test Prep</p>
+    <h1>Score Higher. Open More Doors.</h1>
+    <p>Expert SAT and ACT tutoring built around your student&rsquo;s specific strengths and gaps &mdash; not a generic curriculum.</p>
+    <button class="btn-w" onclick="showPage('home');setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),100)">Get a Free Diagnostic</button>
+  </section>
+
+  <section class="psec">
+    <p class="slabel">What We Offer</p>
+    <h2 class="stitle">Test Prep Programs</h2>
+    <p class="ssub">Every student gets a customized approach based on a thorough diagnostic assessment.</p>
+    <div class="ogrid">
+      <div class="ocard"><h4>SAT Private Tutoring</h4><p>One-on-one sessions with a top-scoring tutor, fully customized to close your student&rsquo;s specific gaps. Flexible scheduling, in-person or virtual.</p></div>
+      <div class="ocard"><h4>ACT Private Tutoring</h4><p>Targeted instruction across all four ACT sections. We specialize in science reasoning, time management, and English strategy.</p></div>
+      <div class="ocard"><h4>Small Group Courses</h4><p>Cohorts of 4&ndash;6 students covering all test content in a structured 8-week curriculum. Collaborative, rigorous, and more affordable.</p></div>
+      <div class="ocard"><h4>Intensive Boot Camps</h4><p>Weekend and school-break intensives for students who need rapid improvement before an upcoming test date.</p></div>
+    </div>
+  </section>
+
+  <div class="bglight">
+    <div class="bglight-inner">
+      <p class="slabel">Our Process</p>
+      <h2 class="stitle">How It Works</h2>
+      <div class="steps">
+        <div class="step"><div class="sn">1</div><div class="sc"><h4>Free diagnostic assessment</h4><p>Your student takes a full-length practice test. We analyze every answer to build a precise picture of strengths, weaknesses, and opportunity areas.</p></div></div>
+        <div class="step"><div class="sn">2</div><div class="sc"><h4>Custom study plan</h4><p>We develop a study roadmap that targets high-impact areas first, tracks progress, and accounts for your student&rsquo;s schedule and test date.</p></div></div>
+        <div class="step"><div class="sn">3</div><div class="sc"><h4>Expert instruction</h4><p>Sessions are led by instructors who scored in the 99th percentile. They teach strategy, not just content &mdash; because test-taking is a skill.</p></div></div>
+        <div class="step"><div class="sn">4</div><div class="sc"><h4>Track progress &amp; adjust</h4><p>We run regular practice tests, share results with parents, and adjust the plan as needed to ensure steady improvement toward the target score.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pagecta">
+    <h2 class="stitle">Ready to see what&rsquo;s possible?</h2>
+    <p style="color:var(--muted);font-weight:300;margin-bottom:1.5rem">Start with a free diagnostic and personalized score roadmap.</p>
+    <button class="btn-g" onclick="showPage('home');setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),100)">Schedule a Free Diagnostic</button>
+  </div>
+
+  <footer>
+    <strong>Montara Education</strong> &middot; Montara Test Prep &middot; Montara College Counseling<br>
+    &copy; <script>document.write(new Date().getFullYear())</script> Montara Education. All rights reserved.
+  </footer>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
