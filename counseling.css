@@ -251,13 +251,17 @@
   .tl-card { padding: 1.25rem; }
   .tl-card h3 { font-size: 1.1rem; }
 
-  /* Comparison */
+  /* Comparison — card layout on mobile */
   .cc-compare { padding: 48px 1.5rem; }
-  .cc-compare-row { grid-template-columns: 1fr; }
+  .cc-compare-table { border: none; box-shadow: none; }
+  .cc-compare-row { grid-template-columns: 1fr; border: 1px solid var(--border); border-radius: var(--r); margin-bottom: .75rem; overflow: hidden; }
+  .cc-compare-row > div { border-bottom: none; }
   .cc-compare-header { display: none; }
-  .cc-compare-feature { font-weight: 600; background: var(--off); }
-  .cc-compare-them::before { content: 'Typical: '; font-weight: 500; color: var(--muted); }
-  .cc-compare-us::before { content: 'Montara: '; font-weight: 600; color: var(--green); }
+  .cc-compare-feature { font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; background: var(--off); padding: .75rem 1rem; border-bottom: 1px solid var(--border) !important; }
+  .cc-compare-them { padding: .75rem 1rem; font-size: .82rem; color: #999; border-left: 3px solid #ddd; }
+  .cc-compare-them::before { content: none; }
+  .cc-compare-us { padding: .75rem 1rem; font-size: .82rem; border-left: 3px solid var(--green); background: var(--green-light); }
+  .cc-compare-us::before { content: none; }
 
   /* Track record */
   .cc-record { padding: 48px 1.5rem; }
