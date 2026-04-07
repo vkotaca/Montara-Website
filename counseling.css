@@ -29,7 +29,7 @@
   content: "0" counter(diffcard);
   position: absolute; top: 12px; right: 16px;
   font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 600;
-  color: var(--green); opacity: .06; line-height: 1; pointer-events: none;
+  color: var(--green); opacity: .12; line-height: 1; pointer-events: none;
 }
 
 /* Icon hover animation */
