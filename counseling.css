@@ -183,25 +183,27 @@
 /* COMPARISON TABLE */
 .cc-compare { padding: 80px 2rem; background: var(--off); }
 .cc-compare-inner { max-width: 900px; margin: 0 auto; }
-.cc-compare-table { margin-top: 3rem; border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
+.cc-compare-table { margin-top: 3rem; border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.06); }
 .cc-compare-row {
   display: grid; grid-template-columns: 180px 1fr 1fr; gap: 0;
 }
 .cc-compare-row > div { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); }
 .cc-compare-row:last-child > div { border-bottom: none; }
-.cc-compare-header { background: var(--green); }
-.cc-compare-header > div { color: var(--white); font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; border-bottom-color: rgba(255,255,255,.15); }
+.cc-compare-header > div { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.cc-compare-header .cc-compare-feature { background: var(--white); color: var(--muted); }
+.cc-compare-header .cc-compare-them { background: #f5f5f5; color: var(--muted); border-bottom-color: #e0e0e0; }
+.cc-compare-header .cc-compare-us { background: var(--green); color: var(--white); border-bottom-color: rgba(255,255,255,.15); }
 .cc-compare-feature {
   font-size: .82rem; font-weight: 500; color: var(--black); background: var(--white);
   display: flex; align-items: center;
 }
 .cc-compare-them {
-  font-size: .84rem; font-weight: 300; color: var(--muted); background: var(--white);
-  display: flex; align-items: center;
+  font-size: .84rem; font-weight: 300; color: #888; background: #fafafa;
+  display: flex; align-items: center; border-left: 1px solid var(--border);
 }
 .cc-compare-us {
-  font-size: .84rem; font-weight: 400; color: var(--black); background: var(--green-light);
-  display: flex; align-items: center;
+  font-size: .84rem; font-weight: 400; color: var(--green-dark); background: var(--green-light);
+  display: flex; align-items: center; border-left: 1px solid var(--green-mid);
 }
 
 /* RESPONSIVE */
