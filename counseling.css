@@ -43,6 +43,26 @@
 .cc-diff-card h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 500; color: var(--black); margin-bottom: .5rem; }
 .cc-diff-card p { font-size: .875rem; font-weight: 300; color: var(--muted); line-height: 1.7; }
 
+/* START EARLY — ONGOING ADVISING */
+.cc-early { padding: 80px 2rem; background: var(--black); }
+.cc-early-inner { max-width: 680px; margin: 0 auto; }
+.cc-early .slabel { color: rgba(255,255,255,.4); }
+.cc-early .stitle { color: var(--white); }
+.cc-early-content p { font-size: .95rem; font-weight: 300; color: rgba(255,255,255,.6); line-height: 1.8; margin-bottom: 1.5rem; }
+.cc-early-list { list-style: none; margin-bottom: 2rem; }
+.cc-early-list li {
+  font-size: .875rem; color: rgba(255,255,255,.8); padding: .5rem 0;
+  display: flex; align-items: center; gap: .6rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.cc-early-list li:last-child { border-bottom: none; }
+.cc-early-list li::before { content: ''; width: 5px; height: 5px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+.cc-early-price {
+  font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 600;
+  color: var(--white); line-height: 1; margin-bottom: 1.5rem;
+}
+.cc-early-price span { font-size: 1rem; font-weight: 400; color: rgba(255,255,255,.4); }
+
 /* PROCESS — VERTICAL TIMELINE */
 .cc-process { background: var(--green); padding: 80px 2rem; }
 .cc-process-inner { max-width: 900px; margin: 0 auto; }
@@ -238,6 +258,10 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  /* Start Early */
+  .cc-early { padding: 48px 1.5rem; }
+  .cc-early-price { font-size: 2rem; }
+
   /* Differentiators */
   .cc-diff { padding: 48px 1.5rem; }
   .cc-diff-grid { grid-template-columns: 1fr; margin-top: 2rem; }
