@@ -124,6 +124,30 @@ nav {
 .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--green); background: var(--white); }
 .fg textarea { resize: vertical; min-height: 100px; }
 
+/* HOME TRACK RECORD (compressed) */
+.home-record { background: var(--off); padding: 80px 2rem; border-top: 1px solid var(--border); }
+.home-record-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+.home-record .slabel, .home-record .stitle, .home-record .ssub { text-align: center; margin-left: auto; margin-right: auto; }
+.home-record-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin: 2.5rem 0 2rem; }
+.home-school {
+  display: flex; align-items: center; gap: .5rem;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 8px; padding: .6rem 1rem;
+  transition: box-shadow .2s, transform .2s;
+}
+.home-school:hover { box-shadow: 0 4px 16px rgba(0,103,75,.08); transform: translateY(-1px); }
+.home-school img { height: 24px; width: 24px; object-fit: contain; flex-shrink: 0; }
+.home-school-count {
+  font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600;
+  color: var(--green); line-height: 1; min-width: 22px;
+}
+.home-school-name { font-size: .82rem; font-weight: 400; color: var(--muted); }
+.home-record-link {
+  display: inline-block; font-size: .9rem; font-weight: 500; color: var(--green);
+  text-decoration: none; margin-top: .5rem; transition: color .2s;
+}
+.home-record-link:hover { color: var(--green-dark); }
+
 /* FOOTER */
 footer { background: var(--black); color: rgba(255,255,255,.4); padding: 2.5rem 2rem; text-align: center; font-size: .8rem; font-weight: 300; line-height: 1.8; }
 footer strong { color: rgba(255,255,255,.85); font-weight: 500; }

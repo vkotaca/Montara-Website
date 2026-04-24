@@ -67,6 +67,7 @@
   <ul class="nav-links">
     <li><a onclick="showPage('home')">Home</a></li>
     <li><a href="counseling.html">College Counseling</a></li>
+    <li><a href="sat.html">SAT Prep</a></li>
     <li><a href="partners.html">Partners</a></li>
     <li><a class="nav-cta" onclick="showPage('home');setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),100)">Get Started</a></li>
   </ul>
@@ -139,7 +140,7 @@
         </ul>
         <span class="ulink">Explore Counseling &rarr;</span>
       </div>
-      <div class="ucard ucard-soon">
+      <div class="ucard ucard-soon" onclick="window.location.href='sat.html'" style="cursor:pointer;pointer-events:auto;opacity:1">
         <div class="uicon">&#128221;</div>
         <h3>Montara SAT Prep</h3>
         <p>A team-based approach to SAT preparation &mdash; small cohorts, group events, and collaborative learning led by top-scoring instructors.</p>
@@ -149,8 +150,30 @@
           <li>Aligned to official SAT test dates</li>
           <li>Diagnostic assessment &amp; study plan</li>
         </ul>
-        <span class="ulink ulink-soon">Launching May 2026</span>
+        <span class="ulink">Explore SAT Prep &rarr;</span>
       </div>
+    </div>
+  </section>
+
+  <!-- COMPRESSED TRACK RECORD -->
+  <section class="home-record">
+    <div class="home-record-inner">
+      <p class="slabel">Proven Results</p>
+      <h2 class="stitle">Acceptances at the Nation's Top Universities</h2>
+      <p class="ssub">Our students have been admitted to the most selective schools in the country.</p>
+      <div class="home-record-grid">
+        <div class="home-school"><img src="assets/logos/stanford.svg" alt="Stanford"><span class="home-school-count">4</span><span class="home-school-name">Stanford</span></div>
+        <div class="home-school"><img src="assets/logos/harvard.svg" alt="Harvard"><span class="home-school-count">3</span><span class="home-school-name">Harvard</span></div>
+        <div class="home-school"><img src="assets/logos/yale.svg" alt="Yale"><span class="home-school-count">3</span><span class="home-school-name">Yale</span></div>
+        <div class="home-school"><img src="assets/logos/mit.svg" alt="MIT"><span class="home-school-count">1</span><span class="home-school-name">MIT</span></div>
+        <div class="home-school"><img src="assets/logos/princeton.svg" alt="Princeton"><span class="home-school-count">1</span><span class="home-school-name">Princeton</span></div>
+        <div class="home-school"><img src="assets/logos/cornell.svg" alt="Cornell"><span class="home-school-count">3</span><span class="home-school-name">Cornell</span></div>
+        <div class="home-school"><img src="assets/logos/upenn.svg" alt="UPenn"><span class="home-school-count">1</span><span class="home-school-name">UPenn</span></div>
+        <div class="home-school"><img src="assets/logos/duke.svg" alt="Duke"><span class="home-school-count">3</span><span class="home-school-name">Duke</span></div>
+        <div class="home-school"><img src="assets/logos/ucberkeley.svg" alt="UC Berkeley"><span class="home-school-count">12</span><span class="home-school-name">UC Berkeley</span></div>
+        <div class="home-school"><img src="assets/logos/ucla.svg" alt="UCLA"><span class="home-school-count">8</span><span class="home-school-name">UCLA</span></div>
+      </div>
+      <a class="home-record-link" href="counseling.html#track-record">View the full track record &rarr;</a>
     </div>
   </section>
 

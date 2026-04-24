@@ -1,0 +1,112 @@
+/* ===== SAT PREP PAGE STYLES ===== */
+
+.nav-active { color: var(--black) !important; font-weight: 500 !important; }
+
+/* HERO */
+.sat-hero { position: relative; }
+.sat-hero-badge {
+  display: inline-block; background: rgba(255,255,255,.15);
+  color: var(--white); font-size: .72rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 20px;
+  margin-bottom: 1.25rem; border: 1px solid rgba(255,255,255,.25);
+  position: relative; z-index: 1;
+}
+
+/* FEATURED TESTIMONIAL */
+.sat-testimonial { background: var(--black); padding: 80px 2rem; }
+.sat-testimonial-inner {
+  max-width: 900px; margin: 0 auto;
+  display: grid; grid-template-columns: 280px 1fr; gap: 3rem; align-items: center;
+}
+.sat-testimonial-score {
+  background: var(--green); border-radius: var(--r); padding: 2rem;
+  text-align: center; position: relative; overflow: hidden;
+}
+.sat-testimonial-score::before {
+  content: ''; position: absolute; top: -30px; right: -30px;
+  width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,.06);
+}
+.sat-score-number {
+  font-family: 'Playfair Display', serif; font-size: 4.5rem; font-weight: 600;
+  color: var(--white); line-height: 1; position: relative;
+}
+.sat-score-label {
+  font-size: .8rem; font-weight: 500; color: rgba(255,255,255,.7);
+  text-transform: uppercase; letter-spacing: .12em; margin-top: .5rem; position: relative;
+}
+.sat-testimonial-content .slabel { color: rgba(255,255,255,.4); }
+.sat-testimonial-content blockquote { margin: 1rem 0; border-left: 3px solid var(--green); padding-left: 1.25rem; }
+.sat-testimonial-content blockquote p {
+  font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic;
+  color: var(--white); line-height: 1.6; margin-bottom: 0;
+}
+.sat-testimonial-author {
+  font-size: .82rem; font-weight: 500; color: rgba(255,255,255,.6);
+  letter-spacing: .06em; margin-top: 1rem;
+}
+
+/* COURSE STRUCTURE */
+.sat-structure { padding: 80px 2rem; background: var(--white); }
+.sat-structure-inner { max-width: 1000px; margin: 0 auto; }
+.sat-structure-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3rem;
+}
+.sat-feature {
+  border: 1px solid var(--border); border-radius: var(--r); padding: 2rem;
+  background: var(--white); transition: box-shadow .3s, transform .3s;
+  position: relative; overflow: hidden;
+}
+.sat-feature::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--green), var(--green-dark));
+}
+.sat-feature:hover { box-shadow: 0 8px 28px rgba(0,103,75,.1); transform: translateY(-2px); }
+.sat-feature-icon {
+  width: 44px; height: 44px; border-radius: 10px; background: var(--green-light);
+  display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+}
+.sat-feature h3 {
+  font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 500;
+  color: var(--black); margin-bottom: .5rem;
+}
+.sat-feature p { font-size: .875rem; font-weight: 300; color: var(--muted); line-height: 1.7; }
+
+/* TEST DATES */
+.sat-dates { padding: 80px 2rem; background: var(--off); }
+.sat-dates-inner { max-width: 780px; margin: 0 auto; }
+.sat-dates-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem;
+}
+.sat-date-group {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 2rem;
+}
+.sat-date-group h4 {
+  font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 500;
+  color: var(--green); margin-bottom: 1rem; padding-bottom: .5rem;
+  border-bottom: 2px solid var(--green-light);
+}
+.sat-date-group ul { list-style: none; }
+.sat-date-group li {
+  font-size: .9rem; color: var(--black); padding: .5rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: .6rem;
+}
+.sat-date-group li:last-child { border-bottom: none; }
+.sat-date-group li::before { content: '\2713'; color: var(--green); font-weight: 600; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sat-testimonial { padding: 48px 1.5rem; }
+  .sat-testimonial-inner { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
+  .sat-testimonial-content blockquote { border-left: none; border-top: 3px solid var(--green); padding-left: 0; padding-top: 1rem; }
+  .sat-score-number { font-size: 3.5rem; }
+
+  .sat-structure { padding: 48px 1.5rem; }
+  .sat-structure-grid { grid-template-columns: 1fr; }
+
+  .sat-dates { padding: 48px 1.5rem; }
+  .sat-dates-grid { grid-template-columns: 1fr; }
+}
