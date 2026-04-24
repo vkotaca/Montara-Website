@@ -97,6 +97,60 @@
 .sat-date-group li:last-child { border-bottom: none; }
 .sat-date-group li::before { content: '\2713'; color: var(--green); font-weight: 600; }
 
+/* WHY COHORT */
+.sat-cohort { padding: 80px 2rem; background: var(--green-light); }
+.sat-cohort-inner { max-width: 1000px; margin: 0 auto; }
+.sat-cohort-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 3rem;
+}
+.sat-cohort-card {
+  background: var(--white); border-radius: var(--r); padding: 2rem;
+  position: relative; overflow: hidden;
+  transition: box-shadow .3s, transform .3s;
+}
+.sat-cohort-card:hover { box-shadow: 0 8px 28px rgba(0,103,75,.1); transform: translateY(-2px); }
+.sat-cohort-num {
+  font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600;
+  color: var(--green); letter-spacing: .15em; margin-bottom: .75rem;
+}
+.sat-cohort-card h3 {
+  font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 500;
+  color: var(--black); margin-bottom: .6rem;
+}
+.sat-cohort-card p { font-size: .9rem; font-weight: 300; color: var(--muted); line-height: 1.7; }
+
+/* FAQ */
+.sat-faq { padding: 80px 2rem; background: var(--white); }
+.sat-faq-inner { max-width: 760px; margin: 0 auto; }
+.sat-faq-list { margin-top: 3rem; display: grid; gap: .75rem; }
+.sat-faq-item {
+  background: var(--off); border: 1px solid var(--border);
+  border-radius: var(--r); overflow: hidden;
+  transition: box-shadow .25s, border-color .25s;
+}
+.sat-faq-item[open] { border-color: var(--green); box-shadow: 0 4px 16px rgba(0,103,75,.06); }
+.sat-faq-item summary {
+  list-style: none; cursor: pointer; padding: 1.15rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: .95rem; font-weight: 500; color: var(--black);
+}
+.sat-faq-item summary::-webkit-details-marker { display: none; }
+.sat-faq-toggle {
+  width: 20px; height: 20px; position: relative; flex-shrink: 0; margin-left: 1rem;
+}
+.sat-faq-toggle::before, .sat-faq-toggle::after {
+  content: ''; position: absolute; background: var(--green);
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  transition: transform .3s;
+}
+.sat-faq-toggle::before { width: 12px; height: 2px; }
+.sat-faq-toggle::after { width: 2px; height: 12px; }
+.sat-faq-item[open] .sat-faq-toggle::after { transform: translate(-50%, -50%) rotate(90deg); opacity: 0; }
+.sat-faq-item p {
+  padding: 0 1.5rem 1.25rem; font-size: .9rem; font-weight: 300;
+  color: var(--muted); line-height: 1.7; margin: 0;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .sat-testimonial { padding: 48px 1.5rem; }
@@ -109,4 +163,11 @@
 
   .sat-dates { padding: 48px 1.5rem; }
   .sat-dates-grid { grid-template-columns: 1fr; }
+
+  .sat-cohort { padding: 48px 1.5rem; }
+  .sat-cohort-grid { grid-template-columns: 1fr; }
+
+  .sat-faq { padding: 48px 1.5rem; }
+  .sat-faq-item summary { padding: 1rem 1.25rem; font-size: .9rem; }
+  .sat-faq-item p { padding: 0 1.25rem 1rem; font-size: .85rem; }
 }
