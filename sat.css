@@ -151,6 +151,42 @@
   color: var(--muted); line-height: 1.7; margin: 0;
 }
 
+/* PRICING */
+.sat-pricing { padding: 80px 2rem; background: var(--off); }
+.sat-pricing-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+.sat-pricing-card {
+  background: var(--white); border: 1px solid var(--green);
+  border-radius: var(--r); padding: 2.5rem 2rem;
+  margin-top: 2.5rem; position: relative; overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,103,75,.1);
+  text-align: center;
+}
+.sat-pricing-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--green), var(--green-dark));
+}
+.sat-pricing-amount {
+  font-family: 'Playfair Display', serif; font-size: 3.4rem; font-weight: 600;
+  color: var(--green); line-height: 1; margin-bottom: .35rem;
+}
+.sat-pricing-cents { font-size: 1.4rem; font-weight: 600; color: var(--green); }
+.sat-pricing-label {
+  font-size: .78rem; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;
+}
+.sat-pricing-list {
+  list-style: none; margin: 0 0 1.75rem; text-align: left;
+  max-width: 380px; margin-left: auto; margin-right: auto;
+}
+.sat-pricing-list li {
+  font-size: .9rem; color: var(--black); padding: .5rem 0;
+  display: flex; align-items: baseline; gap: .6rem;
+}
+.sat-pricing-list li::before {
+  content: '\2713'; color: var(--green); font-weight: 700; flex-shrink: 0;
+}
+.sat-pricing-btn { display: inline-block; text-decoration: none; padding: 12px 32px; }
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .sat-testimonial { padding: 48px 1.5rem; }
@@ -170,4 +206,8 @@
   .sat-faq { padding: 48px 1.5rem; }
   .sat-faq-item summary { padding: 1rem 1.25rem; font-size: .9rem; }
   .sat-faq-item p { padding: 0 1.25rem 1rem; font-size: .85rem; }
+
+  .sat-pricing { padding: 48px 1.5rem; }
+  .sat-pricing-card { padding: 2rem 1.5rem; }
+  .sat-pricing-amount { font-size: 2.6rem; }
 }

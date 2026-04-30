@@ -91,6 +91,11 @@ nav {
 .uf li { font-size: .85rem; color: var(--black); padding: .4rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: .6rem; }
 .uf li:last-child { border-bottom: none; }
 .uf li::before { content: ''; width: 5px; height: 5px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+.ucard-price {
+  font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600;
+  color: var(--green); margin-bottom: 1rem; padding-top: .25rem;
+}
+.ucard-price span { font-size: .8rem; font-weight: 400; color: var(--muted); font-family: 'DM Sans', sans-serif; }
 .ulink { font-size: .85rem; font-weight: 500; color: var(--green); cursor: pointer; }
 .ulink:hover { color: var(--green-dark); }
 .ucard-soon { opacity: .6; cursor: default; pointer-events: none; }
